@@ -1,0 +1,12 @@
+# Ignore VS Code settings
+.vscode/
+
+# Ignore Excel temp files
+~$*.xlsx
+
+# Ignore SQL session files
+*.session.sql
+
+# Ignore system files
+Thumbs.db
+.DS_Store
