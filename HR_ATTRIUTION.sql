@@ -1,10 +1,16 @@
 USE hr_attriution;
-/*SEEING ALL DATA*/
+-- sEEING ALL DATA
+-- sEEING ALL DATA
+-- sEEING ALL DATA
 SELECT *
 FROM hr_table;
-/*--check the number of rows in the dataset*/
+-- check the number of rows in the dataset
+-- check the number of rows in the dataset
+-- check the number of rows in the dataset
 SELECT COUNT(*) AS STAFF_COUNT
 FROM hr_table;
+-- CHECKING TOTAL ATTRITION RATE
+-- CHECKING TOTAL ATTRITION RATE
 -- CHECKING TOTAL ATTRITION RATE
 SELECT Total_staff,
     total_attrition,
@@ -19,6 +25,8 @@ FROM (
             ) AS total_attrition
         FROM hr_table
     ) T;
+-- DEPARTMENT ANALYSIS
+-- DEPARTMENT ANALYSIS
 -- DEPARTMENT ANALYSIS
 WITH department_stat AS (
     SELECT department,
@@ -40,23 +48,51 @@ SELECT department,
         SELECT COUNT(DISTINCT(department))
         from hr_table
     ) AS Num_of_dept
-FROM department_stat;
+FROM department_stat
+ORDER BY attrition_rate DESC;
 -- checking job satisfaction vs attrition by departments
+-- checking job satisfaction vs attrition by departments
+-- checking job satisfaction vs attrition by departments
+WITH satisfaction_score AS (
+    SELECT department,
+        COUNT(*) STAFF,
+        sum(
+            CASE
+                WHEN jobsatisfaction = 1 then 1
+                else 0
+            end
+        ) AS SCORE_1,
+        sum(
+            CASE
+                WHEN jobsatisfaction = 2 then 1
+                else 0
+            end
+        ) score_2,
+        sum(
+            CASE
+                WHEN jobsatisfaction = 3 then 1
+                else 0
+            end
+        ) score_3,
+        sum(
+            CASE
+                WHEN jobsatisfaction = 4 then 1
+                else 0
+            end
+        ) score_4
+    from hr_table
+    WHERE Attrition = 'Yes'
+    GROUP BY department
+)
 SELECT department,
-    JobSatisfaction,
-    COUNT(*)
-FROM hr_table
-WHERE department IN (
-        'Research & Development',
-        'Human Resources',
-        'Sales'
-    )
-    AND attrition = 'yes'
-GROUP BY department,
-    JobSatisfaction
-ORDER BY department,
-    JobSatisfaction;
-/*gender analysis*/
+    ROUND((100 * score_1) / staff, 2) SCORE_1,
+    ROUND((100 * score_2) / staff, 2) SCORE_2,
+    ROUND((100 * score_3) / staff, 2) SCORE_3,
+    ROUND((100 * score_4) / staff, 2) SCORE_4
+from satisfaction_score;
+-- gender analysis
+-- gender analysis*/
+-- gender analysis
 -- create a CTE
 WITH gender_stat AS (
     SELECT gender,
@@ -75,6 +111,8 @@ SELECT gender,
     attrited,
     ROUND((100 * attrited) / staff_count, 2) AS attrition_rate
 FROM gender_stat;
+-- Age analysis
+-- Age analysis
 -- Age analysis
 SELECT AGE_RANGE,
     NUMBER_OF_STAFF,
@@ -474,3 +512,6 @@ FROM hr_table
 GROUP BY overtime,
     jobsatisfaction
 ORDER BY attrition_rate DESC;
+SELECT JobSatisfaction
+from hr_table
+GROUP BY JobSatisfaction;
