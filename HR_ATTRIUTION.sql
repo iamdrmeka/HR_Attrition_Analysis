@@ -293,7 +293,7 @@ FROM(
                 END
             ) AS attrited
         FROM hr_table
-        GROUP By JobInvolvement
+        GROUP By JobInvolvementSka
         order by JobInvolvement
     ) T;
 -- SALARY RANGE VS ATTRITION RATE
@@ -439,7 +439,7 @@ SELECT YearsInCurrentRole,
 FROM hr_table
 GROUP BY YearsInCurrentRole
 ORDER BY YearsInCurrentRole ASC;
---YEARS WITH CURERENT MANAGER
+-- YEARS WITH CURERENT MANAGER
 SELECT role_tenure,
     number_of_staff,
     attrited,

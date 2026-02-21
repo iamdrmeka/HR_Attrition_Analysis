@@ -213,3 +213,6 @@ Staff who had a high and medium salary scored better in job satisfaction. while 
 ## Author
 
 **Nnaemeka Ijeoma**
+
+
+https://github.com/iamdrmeka/HR_Attrition_Analysis
