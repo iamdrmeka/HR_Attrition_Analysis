@@ -293,7 +293,7 @@ FROM(
                 END
             ) AS attrited
         FROM hr_table
-        GROUP By JobInvolvementSka
+        GROUP By JobInvolvement
         order by JobInvolvement
     ) T;
 -- SALARY RANGE VS ATTRITION RATE
