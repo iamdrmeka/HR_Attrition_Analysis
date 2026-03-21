@@ -217,9 +217,11 @@ Staff who had a high and medium salary scored better in job satisfaction. while 
 
 ## project Files
 
-[SQL QUERIES](HR_ATTRIUTION.sql)
-[DATASET](hr_project.csv)
-[PYTHON PANDAS](hr_attrition.ipynb)
+[**SQL QUERIES**](HR_ATTRIUTION.sql)
+
+[**DATASET**](hr_project.csv)
+
+[**PYTHON PANDAS**](hr_attrition.ipynb)
 
 ## Author
 
