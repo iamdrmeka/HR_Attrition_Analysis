@@ -260,6 +260,7 @@ SELECT Jobrole,
 FROM hr_table
 GROUP BY jobrole
 ORDER BY attrition_rate DESC;
+
 -- job level analysis
 SELECT Joblevel,
     staff_strength,
@@ -278,6 +279,8 @@ FROM(
         GROUP By joblevel
         order by joblevel
     ) T;
+
+
 -- Job Involvement analysis
 SELECT Jobinvolvement,
     staff_count,
@@ -295,15 +298,19 @@ FROM(
         FROM hr_table
         GROUP By JobInvolvement
         order by JobInvolvement
+
     ) T;
+
+
+
 -- SALARY RANGE VS ATTRITION RATE
 WITH income_stat AS (
     SELECT CASE
-            WHEN monthlyincome BETWEEN 1 AND 4800 THEN '1 - 4800'
-            WHEN monthlyincome BETWEEN 4800 AND 8600 THEN '4800 - 8600'
-            WHEN monthlyincome BETWEEN 8601 AND 12500 THEN '8601 - 12500'
-            WHEN monthlyincome BETWEEN 12501 AND 16200 THEN '12501 - 16200'
-            WHEN monthlyincome BETWEEN 16200 AND 20000 THEN '16200 - 20000'
+            WHEN monthlyincome BETWEEN 1 AND 5000 THEN 'Below 5,000'
+            WHEN monthlyincome BETWEEN 5001 AND 9000 THEN '5,001 - 9,000'
+            WHEN monthlyincome BETWEEN 9001 AND 12500 THEN '9,001 - 12500'
+            WHEN monthlyincome BETWEEN 12501 AND 16000 THEN '12501 - 16,000'
+            WHEN monthlyincome BETWEEN 16001 AND 20000 THEN '16,000 above'
             ELSE 'OTHERS'
         END as salary_range,
         CASE
@@ -331,6 +338,8 @@ SELECT salary_range,
     ROUND((100 * attrited / count), 2) AS attrition_rate
 FROM income_stat
 ORDER BY sort_key ASC;
+
+
 -- OVERTIME VS ATTRITON
 SELECT overtime,
     count_staff,
@@ -379,6 +388,8 @@ SELECT BusinessTravel,
     attrited,
     ROUND((100 * attrited / staff_count), 2) AS attrition_rate
 FROM travel_stat;
+
+
 -- promotion Tenure vs attrition
 SELECT Tenure,
     staff_count,
