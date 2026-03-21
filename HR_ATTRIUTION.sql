@@ -407,6 +407,8 @@ from (
         FROM hr_table
         GROUP BY yearsSinceLastPromotion
     ) t;
+
+    
 -- Number of years worked in company vs attrition
 -- grouped into four places.
 SELECT TENURE,
