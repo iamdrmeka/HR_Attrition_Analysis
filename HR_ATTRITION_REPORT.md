@@ -55,16 +55,16 @@ Employee attrition affects organisations negatively in the following ways
 
 ### 1. Overall Attrition rate
 
-![attrtion_rate](TABLES/Total_attrition_rate.png)
+![alt text](<python visuals/attrition_rate_plot.png>)  
 -Attrition rate: 16.12%
 
 **Insight:**
-The organisation experiences a moderates level of employee turnover requiring the organisation to look inward and create employee retention strategies.
+The organisation experiences a moderates level of employee turnover requiring the organization to look inward and create employee retention strategies.
 
 ### 2.Department Analysis
 
-![Departments](TABLES/department.png)
-![alt text](TABLES/job_satisfaction_by-department.png)
+![  Departments](<python visuals/debt_staff.png>)
+![alt text](<python visuals/attrtion_rate_dept.png>)  
 Research and Development recorded the highest number of staff in the organisation with 961 staff out of the total 1,470 staff, however, the sales team with 446 ( the Second most populated department) led the attrition with 20.63% and human resource with 63 staff had an attrition rate of 19%. Research and development had the lowest attrition rate at 13.84%.
 A deep dive into the job satisfaction levels of those who left shows a very high percentage of HR staff scoring 1 on the job satisfaction score while R&D and sales showed no relationship between job satisfactoin and attrition.
 
@@ -73,7 +73,8 @@ The sales department had the highest attrition rate, however scored higher on th
 
 ### 3. Gender analysis
 
-![GEnder](TABLES/gender_analysis.png)
+![alt text](<python visuals/gender_distr.png>)
+![alt text](<python visuals/attr_rate_age.png>)
 40% of the total staff are female while 60% are men. Atttrition rate for men stood at 17% while women was 14.8%.
 
 **Insight**
@@ -213,6 +214,5 @@ Staff who had a high and medium salary scored better in job satisfaction. while 
 ## Author
 
 **Nnaemeka Ijeoma**
-
 
 https://github.com/iamdrmeka/HR_Attrition_Analysis
