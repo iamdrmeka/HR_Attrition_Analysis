@@ -8,12 +8,12 @@ The goal of project is to generate actionable insights that can help companies i
 
 ## Business Problem
 
-Employee attrition affects organisations negatively in the following ways
+Employee attrition affects organizations negatively in the following ways
 
-- Increased attrition leads to loss of experienced hands, leaving the organisation drained
+- Increased attrition leads to loss of experienced hands, leaving the organization drained
 - high attrition leads to the need to recruitment of new staff which will lead to high recruitment and training cost.
 - reduces the companies productivity.
-- The alove listed could also lead to loss of customer and conesequently revenue.
+- The above listed could also lead to loss of customer and consequently revenue.
 
 ## Dataset information
 
@@ -45,6 +45,8 @@ Employee attrition affects organisations negatively in the following ways
 
     - SQL (Data Analysis)
     - Excel (Data Inspection and Review)
+    - Python Pandas (Data Analysis)
+    - Pyplot (visualization)
     - Aggregation (Group By, Count, SUM)
     - CASE statements
     - Subqueries
@@ -59,14 +61,14 @@ Employee attrition affects organisations negatively in the following ways
 -Attrition rate: 16.12%
 
 **Insight:**
-The organisation experiences a moderates level of employee turnover requiring the organization to look inward and create employee retention strategies.
+The organization experiences a moderates level of employee turnover requiring the organization to look inward and create employee retention strategies.
 
 ### 2.Department Analysis
 
 ![  Departments](<python visuals/debt_staff.png>)
 ![alt text](<python visuals/attrtion_rate_dept.png>)  
-Research and Development recorded the highest number of staff in the organisation with 961 staff out of the total 1,470 staff, however, the sales team with 446 ( the Second most populated department) led the attrition with 20.63% and human resource with 63 staff had an attrition rate of 19%. Research and development had the lowest attrition rate at 13.84%.
-A deep dive into the job satisfaction levels of those who left shows a very high percentage of HR staff scoring 1 on the job satisfaction score while R&D and sales showed no relationship between job satisfactoin and attrition.
+Research and Development recorded the highest number of staff in the organization with 961 staff out of the total 1,470 staff, however, the sales team with 446 ( the Second most populated department) led the attrition with 20.63% and human resource with 63 staff had an attrition rate of 19%. Research and development had the lowest attrition rate at 13.84%.
+A deep dive into the job satisfaction levels of those who left shows a very high percentage of HR staff scoring 1 on the job satisfaction score while R&D and sales showed no relationship between job satisfaction and attrition.
 
 **Insights**
 The sales department had the highest attrition rate, however scored higher on the job satisfaction score suggesting attrition may not be linked to satisfaction but other factors like better pay from competitors.
@@ -76,10 +78,10 @@ The sales department had the highest attrition rate, however scored higher on th
 ![alt text](<python visuals/gender_distr.png>)
 ![alt text](<python visuals/gender_attr_.png>)
 
-40% of the total staff are female while 60% are men. Atttrition rate for men stood at 17% while women was 14.8%.
+40% of the total staff are female while 60% are men. Attrition rate for men stood at 17% while women was 14.8%.
 
 **Insight**
-men are more drivers of the attriton rate than the women.
+men are more drivers of the attrition rate than the women.
 
 ### 4. Age Analysis
 
@@ -90,7 +92,7 @@ The age was divided into 5 group: 18-26 | 27-35 | 36-44 | 45-52 and 53-60.
 While Group 18-26 had only 162 staff in total, they Had an very high attrition rate almost twice as high as the next group (27-35) which came second with an attrition rate of 18.24% as compared to 34.57% by the 18-26 age group. A dive into the job satisfaction score and the age groups shows that job satisfaction was not a major driver for those who left as more than 50% scored within 3 and 4 in the survey.
 
 **Insight**
-The Entry level groups leave the company early, but not because they dont enjoy the job. This may be an indication of uncertain career path in the company, low renumeration for The entry levels and external market pulls.
+The Entry level groups leave the company early, but not because they don't enjoy the job. This may be an indication of uncertain career path in the company, low remuneration for The entry levels and external market pulls.
 
 ### 5. Overall Job satisfaction
 
@@ -100,7 +102,7 @@ overall Job satisfaction report shows a fair job satisfaction score; though the 
 **insights**
 above 50% of the staff who left scored high on the job satisfaction scale suggesting they are not leaving because of a toxic work environment, rather for possible promotion and pay raise. this may be an indication to look at the career ladder as we saw from the age analysis as those at the entry stages leave the most.
 
-### 6. Matrital Status and Attrition
+### 6. Marital Status and Attrition
 
 ![alt text](<python visuals/marital_status_distr.png>)
 ![  m.status](<python visuals/attrition_marital.png>)
@@ -108,7 +110,7 @@ above 50% of the staff who left scored high on the job satisfaction scale sugges
 25.53% of single people quit as against 12% for married and 10% for divorced.
 
 **insight**
-Single people are more than 2x likely to leave as compare the their other counterparts as they have no achor to keep them in one place. married staff possibly do not leave due to family and the need for balance.
+Single people are more than 2x likely to leave as compare the their other counterparts as they have no anchor to keep them in one place. married staff possibly do not leave due to family and the need for balance.
 
 ### 7. EDUCATIONAL FIELD
 
@@ -138,7 +140,7 @@ The staff at the lowest level left the most, signifying poor career growth prosp
 
 ![alt text](<python visuals/job_involvement.png>)
 
-Job involvement analysis shows that staff who were less involved had a higher chance of leaving the organisation. 33% of staff who had a score of 1 in job involvement left.
+Job involvement analysis shows that staff who were less involved had a higher chance of leaving the organization. 33% of staff who had a score of 1 in job involvement left.
 
 **insight**
 HR must identify passionate individuals who are not just coming in to just have a job. The more involved staff are with their jobs, the less the attrition. HR must also identify if there are factors that make the job unappealing to these lower level staff to ensure motivation is not lost at the point of onboarding.
@@ -169,10 +171,10 @@ Distance from home had no significant impact on the attrition rates.
 
 ![alt text](<python visuals/travel_attri.png>)
 
-Staff who travelled often had an almost twice higher chance of leaving.
+Staff who traveled often had an almost twice higher chance of leaving.
 
 **insight**
-This many be as a result of the stress and wear of traveling frequently. as we can see from the table, the more the staff traveled, the more the chance of leaving as even staf who rarely traveled had an attrition rate of 14.96% and none travel had just 8%. Efforts should be made to cushion the effect of the business travel to mitigate the high attrition rate.
+This many be as a result of the stress and wear of traveling frequently. as we can see from the table, the more the staff traveled, the more the chance of leaving as even staff who rarely traveled had an attrition rate of 14.96% and none travel had just 8%. Efforts should be made to cushion the effect of the business travel to mitigate the high attrition rate.
 
 ### 15. Years Since last promotion vs Attrition
 
