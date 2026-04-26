@@ -1,4 +1,4 @@
-![DashBoard](<python visuals/Screenshot 2026-04-26 171154.png>)
+
 
 
 
