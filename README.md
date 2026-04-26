@@ -1,3 +1,7 @@
+![DashBoard](<python visuals/Screenshot 2026-04-26 171154.png>)
+
+
+
 ## PROJECT OVERVIEW
 
 This project analyzes employee attrition rates and patters to identify the key drivers of workforce turnover.  
